@@ -1,27 +1,11 @@
-# Multi-Agent Research System
-# Python dependencies for Google Gemini + Tavily + BeautifulSoup + LangChain/LangGraph.
-# LCEL Runnable components are provided by langchain-core / LangChain; no separate
-# package is needed for LCEL.
-
-# LangChain framework and Google Gemini model integration
-langchain
+streamlit
+langchain>=1.0.0,<2.0.0
 langchain-core
 langchain-google-genai
-
-# Agent orchestration and ReAct-style agent support
 langgraph
-
-# Research/search tool
 tavily-python
-
-# Web-page fetching and HTML parsing
 requests
 beautifulsoup4
-
-# Environment-variable and data-model support
 python-dotenv
 pydantic
-streamlit
-
-# Common typing compatibility utilities
 typing-extensions
