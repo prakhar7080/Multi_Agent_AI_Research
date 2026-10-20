@@ -1,19 +1,20 @@
 from langchain.agents import create_agent
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from tools import web_search, scrape_url
 import os
+import streamlit as st
 from dotenv import load_dotenv
 load_dotenv()
 
 
 
 #model setup
-llm = ChatGoogleGenerativeAI(
-    model="gemini-3.8-flash",
-    temperature=0,
-    api_key= os.getenv("GOOGLE_GENERATIVE_AI_API_KEY")
+llm = ChatOpenAI(
+    model="gpt-4o-mini",
+    api_key=st.secrets["OPENAI_API_KEY"],
+    temperature=0.2
 )
 
 #first agent
